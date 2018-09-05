@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.redapple.todolist"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 3
+        versionName "1.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+kapt {
+    generateStubs = true
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:'+ rootProject.supportLibraryVersion
+    implementation 'com.android.support.constraint:constraint-layout:' + rootProject.constraintLayoutVersion
+    //for recyclerview and cardview
+    implementation 'com.android.support:design:' + rootProject.supportLibraryVersion
+    implementation 'com.android.support:cardview-v7:' + rootProject.supportLibraryVersion
+
+    implementation 'com.google.android.gms:play-services-ads:11.8.0'
+    implementation 'com.android.support:recyclerview-v7:' + rootProject.supportLibraryVersion
+
+    implementation 'android.arch.lifecycle:extensions:' + rootProject.lifecycleVersion
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    annotationProcessor 'android.arch.lifecycle:compiler:' + rootProject.lifecycleVersion
+
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    kapt 'com.google.dagger:dagger-compiler:2.5'
+    implementation 'com.google.dagger:dagger:2.5'
+    implementation 'android.arch.persistence.room:runtime:' + rootProject.roomVersion
+    kapt 'android.arch.persistence.room:compiler:' + rootProject.roomVersion
+}

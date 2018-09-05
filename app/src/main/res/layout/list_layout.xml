@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginEnd="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+<com.loopeer.shadow.ShadowView
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+
+    android:padding="@dimen/tasklist_space"
+    android:layout_alignParentTop="true"
+    app:cornerRadius="4dp"
+    app:shadowRadius="8dp"
+    app:backgroundColor="@color/accent"
+    app:shadowMargin="1dp"
+    app:shadowColor="@color/primary"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="4dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="4dp"
+            android:layout_height="wrap_content">
+            <com.redapple.views.widgets.CustomTextView
+                android:id="@+id/date"
+                android:text="15 jan 2015"
+                android:elevation="1dp"
+                android:textSize="15dp"
+
+                android:layout_centerVertical="true"
+                app:typeface="Roboto_Regular.ttf"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/primary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/ivEdit"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_edit_white"
+                android:tint="#000"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/ckTaskChecked"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@color/accent"/>
+
+
+        <com.redapple.views.widgets.CustomTextView
+            android:id="@+id/name"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical|top"
+            android:textSize="13dp"
+            android:text="sdfsdfsfd"
+            android:layout_below="@+id/llDate"
+            app:typeface="Roboto_Light.ttf"
+            android:textColor="@color/primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+
+    </LinearLayout>
+
+</com.loopeer.shadow.ShadowView>
+
+
+</RelativeLayout>

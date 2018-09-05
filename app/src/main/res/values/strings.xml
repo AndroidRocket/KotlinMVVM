@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="title_activity_home">Notes</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_add_task">Add Task</string>
+
+    <string-array name="nav_item_activity_titles">
+        <item>Notes</item>
+        <item>Share App</item>
+        <item>Settings</item>
+    </string-array>
+
+
+    <string name="btn_fullscreen_ad">Show Interstitial Ad</string>
+    <string name="btn_rewarded_video">Show Rewarded Video Ad</string>
+
+
+    <!-- TODO - add your ad unit Ids -->
+    <!-- AdMob ad unit IDs -->
+    <string name="admob_app_id">ca-app-pub-4025108063106369~4653993633</string>
+    <string name="banner_home_footer">ca-app-pub-4025108063106369/6669782884</string>
+    <string name="interstitial_full_screen">ca-app-pub-XXXXXXXX~XXXXXXXXXXX</string>
+    <string name="rewarded_video">ca-app-pub-XXXXXXXX~XXXXXXXXXXX</string>
+    <string name="utf8">UTF-8</string>
+</resources>

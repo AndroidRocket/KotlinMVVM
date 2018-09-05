@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/primary">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+    <com.redapple.views.widgets.CustomTextView
+        android:id="@+id/emptyView"
+        android:layout_width="wrap_content"
+        android:text="Start Adding Notes "
+        android:textColor="#FFF"
+
+        android:textSize="20dp"
+        android:visibility="gone"
+        app:typeface="Roboto_Light.ttf"
+        android:gravity="center_horizontal"
+        android:drawableRight="@drawable/ic_add_white_24dp"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0B0C0E</color>
+    <color name="colorPrimaryDark">#0b0c0e</color>
+    <color name="colorAccent">#FF5722</color>
+
+    <color name="primary">#0B0C0E</color>
+    <color name="primary_dark">#0b0c0e</color>
+    <color name="primary_light">#3b3c3e</color>
+    <color name="accent">#FF5722</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#212121</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="accent_alpha">#80FF5722</color>
+    <color name="primary_alpha">#800B0C0E</color>
+    <color name="dark_primary_alpha">#D90B0C0E</color>
+
+    <color name="light_grey">#FCFCFC</color>
+
+    <color name="shadow_view_foreground_color_light">#33ffffff</color>
+    <color name="shadow_view_default_shadow_color">#DCDDE0</color>
+    <color name="shadow_view_foreground_color_dark">#1f000000</color>
+</resources>

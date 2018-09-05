@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/dialog"
+    android:layout_height="match_parent"
+    android:background="@color/primary_alpha">
+    <ImageView
+        android:id="@+id/closeDialogImg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/ic_close_black_24dp"
+        android:tint="#fff"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rlTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical">
+
+
+        <com.loopeer.shadow.ShadowView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_below="@+id/date"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:layout_marginTop="11dp"
+            app:cornerRadius="4dp"
+            app:shadowMargin="4dp"
+            android:layout_alignParentTop="true"
+            app:shadowRadius="0dp"
+            app:shadowColor="@color/accent"
+            android:layout_height="wrap_content">
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <EditText
+                    android:id="@+id/edTaskName"
+                    android:gravity="top|left"
+                    android:hint="Add Note"
+                    android:padding="4dp"
+
+                    android:inputType="textMultiLine"
+                    android:singleLine="false"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    />
+
+
+                <!-- <Button
+                     android:id="@+id/btnAddTask"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="Add Task"/>-->
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        </com.loopeer.shadow.ShadowView>
+
+        <com.redapple.views.widgets.CustomTextView
+            android:id="@+id/date"
+            android:text="15 jan 2015"
+            android:elevation="1dp"
+            android:textSize="8dp"
+            android:layout_marginLeft="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            app:typeface="Roboto_Light.ttf"
+            android:gravity="center_vertical"
+            android:background="@drawable/btn_back"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/light_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/chkHide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTask"
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:buttonTint="@color/accent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginLeft="24dp"
+        android:padding="8dp"
+        android:text="Hide Note"/>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+       android:layout_below="@+id/rlTask"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_if_tick_outline_216430"
+        android:tint="#fff"
+        />
+
+
+
+</RelativeLayout>

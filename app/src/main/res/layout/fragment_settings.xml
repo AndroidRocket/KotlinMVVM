@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/setting_back">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/scHideNotes"
+        android:layout_width="match_parent"
+        android:text="Show Hidden Notes"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:thumb="@drawable/switch_custom_selector"
+        app:track="@drawable/switch_custom_track"
+        android:textColor="@color/accent"
+        android:padding="12dp"
+        android:layout_margin="8dp"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/accent"
+        android:layout_height="1px"/>
+
+        <com.redapple.views.widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="4dp"
+            app:typeface="Roboto_Light.ttf"
+
+            android:textColor="@color/secondary_text"
+            android:text="- Notes will be visible when first added."
+            android:layout_below="@+id/chkHide"
+            android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/scChangeTheme"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:text="Change Theme"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:thumb="@drawable/switch_custom_selector"
+        app:track="@drawable/switch_custom_track"
+        android:textColor="@color/accent"
+        android:padding="12dp"
+        android:layout_margin="8dp"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="8dp"
+        android:visibility="gone"
+        android:layout_marginRight="8dp"
+        android:background="@color/accent"
+        android:layout_height="1px"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:background="@null"
+            android:text="Cancel"
+            android:textColor="@color/accent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="0dp"
+            android:background="@null"
+            android:text="Submit"
+            android:textColor="@color/accent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</RelativeLayout>
