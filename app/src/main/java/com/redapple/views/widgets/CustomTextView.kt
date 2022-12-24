@@ -2,8 +2,8 @@ package com.redapple.views.widgets
 
 
 import android.content.Context
-import android.support.v7.widget.AppCompatTextView
 import android.util.AttributeSet
+import androidx.appcompat.widget.AppCompatTextView
 import com.redapple.R
 
 import com.redapple.utils.Utils
@@ -27,7 +27,7 @@ class CustomTextView : AppCompatTextView {
     private fun setCustomFont(ctx: Context, attrs: AttributeSet) {
         val a = ctx.obtainStyledAttributes(attrs, R.styleable.CustomTextView)
         val customFont = a.getString(R.styleable.CustomTextView_typeface)
-        typeface = Utils.getTypeFace(ctx, customFont)
+        typeface = customFont?.let { Utils.getTypeFace(ctx, it) }
         a.recycle()
     }
 

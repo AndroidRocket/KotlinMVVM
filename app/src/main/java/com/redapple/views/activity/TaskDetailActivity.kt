@@ -1,12 +1,13 @@
 package com.redapple.views.activity
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.redapple.MyApp
 import com.redapple.R
 import com.redapple.models.TaskItem
@@ -47,7 +48,7 @@ class TaskDetailActivity : AppCompatActivity() {
     {
         simpleViewModel.taskItem.observe(this, Observer<ArrayList<TaskItem>> {it->
             it.let {
-                Log.e("task", it!![0]?.name)
+                it!![0]?.name?.let { it1 -> Log.e("task", it1) }
             }
         })
     }

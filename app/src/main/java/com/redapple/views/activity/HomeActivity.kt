@@ -9,11 +9,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.os.Handler
-import android.support.v4.app.DialogFragment
-import android.support.v4.app.Fragment
-import android.support.v4.view.GravityCompat
-import android.support.v7.app.ActionBarDrawerToggle
-import android.support.v7.app.AppCompatActivity
+
 import android.text.Html
 import android.text.TextUtils
 import android.view.*
@@ -34,8 +30,11 @@ import kotlinx.android.synthetic.main.dialog.view.*
 import java.io.UnsupportedEncodingException
 import kotlin.properties.Delegates
 import android.widget.Toast
-
-
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.Fragment
 
 
 class HomeActivity : AppCompatActivity(), OnShareIntentClickListener {
@@ -134,7 +133,7 @@ class HomeActivity : AppCompatActivity(), OnShareIntentClickListener {
         val dialog = Dialog(this, R.style.MyAlertDialogStyle)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(dialogView)
-        dialog.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
+        dialog.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
         val imageView = dialog.closeDialogImg as ImageView
         imageView.setOnClickListener { revealShow(dialogView, false, dialog) }
 
@@ -307,7 +306,7 @@ class HomeActivity : AppCompatActivity(), OnShareIntentClickListener {
 
     private fun setUpNavigationView() {
         //Setting Navigation View Item Selected Listener to handle the item click of the navigation menu
-        nav_view!!.setNavigationItemSelectedListener({ menuItem ->
+        nav_view!!.setNavigationItemSelectedListener { menuItem ->
             // This method will trigger on item Click of navigation menu
             //Check to see which item was being clicked and perform appropriate action
             when (menuItem.itemId) {
@@ -350,7 +349,7 @@ class HomeActivity : AppCompatActivity(), OnShareIntentClickListener {
 
 
             true
-        })
+        }
 
 
     }

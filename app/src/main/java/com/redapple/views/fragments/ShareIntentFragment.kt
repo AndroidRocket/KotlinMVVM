@@ -2,28 +2,18 @@ package com.redapple.views.fragments
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.content.pm.ResolveInfo
-import android.graphics.Color
 import android.os.Bundle
-import android.support.v4.app.DialogFragment
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
-import android.widget.ImageButton
 import android.widget.LinearLayout
+import androidx.fragment.app.DialogFragment
+import androidx.recyclerview.widget.GridLayoutManager
 import com.redapple.R
-import com.redapple.listeners.OnShareIntentClickListener
-import com.redapple.views.activity.HomeActivity
 import com.redapple.views.adapters.ShareIntentAdapter
 import kotlinx.android.synthetic.main.dialog_shareintent_layout.*
-import kotlinx.android.synthetic.main.fragment_settings.*
-import java.util.ArrayList
-import kotlin.properties.Delegates
 
 
 class ShareIntentFragment : DialogFragment() {
@@ -65,9 +55,9 @@ class ShareIntentFragment : DialogFragment() {
         super.onStart()
         val dialog = dialog
         if (dialog != null) {
-            dialog.window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-            dialog.window.attributes.windowAnimations = R.style.You_Dialog
-            dialog.window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT,
+            dialog.window?.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+            dialog.window?.attributes?.windowAnimations = R.style.You_Dialog
+            dialog.window?.setLayout(LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.MATCH_PARENT)
         }
     }

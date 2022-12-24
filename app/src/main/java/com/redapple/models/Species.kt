@@ -1,4 +1,4 @@
-package boonya.ben.callingwebservice.model
+package com.redapple.models
 
 import com.google.gson.annotations.SerializedName
 

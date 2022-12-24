@@ -1,8 +1,7 @@
 package com.redapple.models
 
-import android.arch.persistence.room.Entity
-import android.arch.persistence.room.PrimaryKey
-import com.google.gson.annotations.SerializedName
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 /**
  * Created by oozou on 7/12/2017 AD.

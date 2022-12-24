@@ -1,7 +1,7 @@
 package com.redapple.repositories
 
-import boonya.ben.callingwebservice.model.Species
-import boonya.ben.callingwebservice.model.SpeciesList
+import com.redapple.models.Species
+import com.redapple.models.SpeciesList
 import com.redapple.api.KotlinApiInterface
 import com.redapple.models.TaskItem
 import com.redapple.models.dao.TaskItemDao

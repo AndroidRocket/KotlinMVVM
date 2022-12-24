@@ -1,14 +1,10 @@
 package com.redapple.viewmodels
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
-import boonya.ben.callingwebservice.model.Species
-import com.redapple.AppDatabase
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import com.redapple.models.Species
 import com.redapple.repositories.TaskRepository
 import com.redapple.models.TaskItem
-import com.redapple.utils.DatabaseAsycTask
-import com.redapple.views.adapters.MyAdapter
 import javax.inject.Inject
 
 

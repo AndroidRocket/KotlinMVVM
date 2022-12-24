@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-    <android.support.v7.widget.SwitchCompat
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/scHideNotes"
         android:layout_width="match_parent"
         android:text="Show Hidden Notes"
@@ -44,7 +44,7 @@
             android:layout_below="@+id/chkHide"
             android:layout_height="wrap_content" />
 
-    <android.support.v7.widget.SwitchCompat
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/scChangeTheme"
         android:layout_width="match_parent"
         android:visibility="gone"

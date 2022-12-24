@@ -30,8 +30,7 @@
 -keep public class * extends android.content.ContentProvider
 -keep public class * extends android.app.backup.BackupAgentHelper
 -keep public class * extends android.preference.Preference
--keep public class com.android.vending.licensing.ILicensingService
--dontnote com.android.vending.licensing.ILicensingService
+
 
 # Explicitly preserve all serialization members. The Serializable interface
 # is only a marker interface, so it wouldn't save them.
@@ -99,7 +98,7 @@
 -keepattributes *Annotation*
 
 # Gson specific classes
--keep class sun.misc.Unsafe { *; }
+#-keep class sun.misc.Unsafe { *; }
 #-keep class com.google.gson.stream.** { *; }
 
 # Application classes that will be serialized/deserialized over Gson
@@ -127,7 +126,7 @@
 -keepattributes EnclosingMethod
 
 # Gson specific classes
--keep class sun.misc.Unsafe { *; }
+#-keep class sun.misc.Unsafe { *; }
 -keep class com.google.gson.stream.** { *; }
 
 -keep class com.google.errorprone.annotations.** { *; }
@@ -144,9 +143,9 @@
 
 -keep class dagger.* { *; }
 -keep class javax.inject.* { *; }
--keep class * extends dagger.internal.Binding
--keep class * extends dagger.internal.ModuleAdapter
--keep class * extends dagger.internal.StaticInjection
+#-keep class * extends dagger.internal.Binding
+#-keep class * extends dagger.internal.ModuleAdapter
+#-keep class * extends dagger.internal.StaticInjection
 
 
 

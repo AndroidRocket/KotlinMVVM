@@ -1,6 +1,6 @@
 package com.redapple.repositories
 
-import boonya.ben.callingwebservice.model.Species
+import com.redapple.models.Species
 import com.redapple.models.TaskItem
 
 /**
@@ -12,7 +12,7 @@ interface TaskRepository {
 
    fun deleteTask(task: ArrayList<TaskItem>,successHandler: (TaskItem?) -> Unit)
 
-   fun getList(successHandler: (List<Species>?)->Unit,failureHandler : (Throwable?)->Unit)
+   fun getList(successHandler: (List<Species>?)->Unit, failureHandler : (Throwable?)->Unit)
 
    fun getListFromDb(successHandler: (List<TaskItem>?) -> Unit)
 

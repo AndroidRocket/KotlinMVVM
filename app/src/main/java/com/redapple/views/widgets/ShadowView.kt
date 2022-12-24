@@ -8,10 +8,11 @@ import android.graphics.drawable.RippleDrawable
 import android.util.AttributeSet
 import android.widget.FrameLayout
 import android.os.Build
-import android.support.v4.content.ContextCompat
+
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import com.redapple.R
 
 
@@ -325,7 +326,9 @@ open class ShadowView @JvmOverloads constructor(context: Context?, attributeSet:
                         it.intrinsicHeight, selfBounds, overlayBounds)
                 it.bounds = overlayBounds
             }
-            it.draw(canvas)
+            if (canvas != null) {
+                it.draw(canvas)
+            }
         }
     }
 

@@ -1,8 +1,7 @@
 package com.redapple.viewmodels
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
-import boonya.ben.callingwebservice.model.Species
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.redapple.models.TaskItem
 import com.redapple.repositories.TaskRepository
 import javax.inject.Inject
@@ -24,11 +23,11 @@ class TaskDetailViewModel : ViewModel()
 
         isLoading.value = true
 
-        repository.insertTask(task,
-                {
-                    taskItem.value = task
-                    isLoading.value = false
-                })
+        repository.insertTask(task
+        ) {
+            taskItem.value = task
+            isLoading.value = false
+        }
     }
 
 }

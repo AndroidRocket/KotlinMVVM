@@ -1,8 +1,7 @@
 package com.redapple.models.dao
 
-import android.arch.persistence.room.Dao
-
-import android.arch.persistence.room.Query
+import androidx.room.Dao
+import androidx.room.Query
 import com.redapple.models.Data
 import com.redapple.models.TaskItem
 

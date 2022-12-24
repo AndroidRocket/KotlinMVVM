@@ -1,6 +1,6 @@
 package com.redapple.api
 
-import boonya.ben.callingwebservice.model.SpeciesList
+import com.redapple.models.SpeciesList
 import retrofit2.Call
 import retrofit2.http.GET
 

@@ -1,13 +1,14 @@
 package com.redapple.models.dao
 
-import android.arch.persistence.room.*
-import android.arch.persistence.room.OnConflictStrategy.REPLACE
+import androidx.room.*
+import androidx.room.OnConflictStrategy.REPLACE
 import com.redapple.models.TaskItem
 
 /**
  * Created by Wilson on 15-02-2018.
  */
-@Dao interface TaskItemDao : GenericDao<TaskItem>
+@Dao
+interface TaskItemDao : GenericDao<TaskItem>
 {
     @Insert(onConflict = REPLACE)
     override fun insert(task : TaskItem) : Long

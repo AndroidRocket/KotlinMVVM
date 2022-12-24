@@ -1,27 +1,18 @@
 package com.redapple.views.adapters
 
 
-import android.content.Intent
 import android.graphics.Color
-import android.support.v4.view.ViewCompat
-import android.support.v7.widget.RecyclerView
 import android.util.Log
-import android.widget.Toast
+import android.view.*
+import androidx.core.view.ViewCompat
+import androidx.recyclerview.widget.RecyclerView
+import com.loopeer.shadow.ShadowView
 import com.redapple.R
 import com.redapple.listeners.RecyclerViewItemListener
 import com.redapple.models.TaskItem
 import com.redapple.utils.Utils
-import com.redapple.views.activity.TaskDetailActivity
 import kotlinx.android.synthetic.main.list_layout.view.*
 import java.util.*
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.view.ActionMode
-import android.view.*
-import com.redapple.views.activity.HomeActivity
-import kotlin.properties.Delegates
-import android.R.attr.mode
-import com.loopeer.shadow.ShadowView
-import kotlin.collections.ArrayList
 
 
 /**
@@ -84,11 +75,11 @@ class MyAdapter(val myAndroidOSList: ArrayList<TaskItem>) : RecyclerView.Adapter
         holder.itemView.ivEdit.setOnClickListener{
             listener.onEditClick(position)
         }
-        holder.itemView.setOnLongClickListener( { view ->
-            (view.context as AppCompatActivity).startSupportActionMode(actionModeCallbacks)
-            selectItem(myAndroidOSList[position],holder.itemView.card)
-            true
-        })
+//        holder.itemView.setOnLongClickListener( { view ->
+//            (view.context as AppCompatActivity).startSupportActionMode(actionModeCallbacks)
+//            selectItem(myAndroidOSList[position],holder.itemView.card)
+//            true
+//        })
         holder.itemView.setOnClickListener {
             selectItem(myAndroidOSList[position],holder.itemView.card)
         }

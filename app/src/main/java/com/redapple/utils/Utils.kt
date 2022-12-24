@@ -7,7 +7,6 @@ import android.content.Context
 import android.graphics.Typeface
 import android.util.Log
 import android.content.Intent
-import android.support.v4.content.ContextCompat.startActivity
 
 
 
